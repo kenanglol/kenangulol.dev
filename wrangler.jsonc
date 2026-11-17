@@ -2,11 +2,8 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "kenangulol-dev",
   "compatibility_date": "2026-11-17",
-  "build": {
-    // Hugo is preinstalled in the Workers Builds image; pin the version
-    // with a HUGO_VERSION build variable in the Cloudflare dashboard.
-    "command": "hugo --gc --minify"
-  },
+  // The site is built by the dashboard build command "hugo --gc --minify",
+  // with a HUGO_VERSION build variable. See KURULUM.md.
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",

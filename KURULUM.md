@@ -6,8 +6,13 @@ Siteyi yayına almak ve yönetmek için gereken adımlar. Sırayla gitmek en kol
 
 1. Cloudflare panelinde **Workers & Pages → Create → Import a repository** yolunu izle.
 2. GitHub bağlantısı istendiğinde **Cloudflare Workers and Pages** uygulamasını kur. Erişim için **Only select repositories** seçip sadece `kenangulol.dev` reposunu ver.
-3. Repoyu seç. Derleme ayarları `wrangler.jsonc` dosyasından okunur. Build komutu `hugo --gc --minify`, yayınlanan klasör `public/`. Panelde ayrıca bir şey yazmana gerek yok.
-4. Projenin ayarlarında **Build → Variables** altına şu değişkeni ekle:
+3. Repoyu seç ve kurulum ekranını şöyle doldur:
+   - **Build command:** `hugo --gc --minify`
+   - **Deploy command:** `npx wrangler deploy` (varsayılan, dokunma)
+   - **Preview command:** `npx wrangler preview` (varsayılan, dokunma)
+
+   Yayınlanan klasör (`public/`) `wrangler.jsonc` dosyasından okunur.
+4. Aynı ekranda **Advanced settings → Build variables** altına şu değişkeni ekle (sonradan projenin **Settings → Build** bölümünden de eklenebilir):
    - `HUGO_VERSION` = `0.170.0`
 
    Cloudflare'in derleme ortamında Hugo kurulu geliyor ama eski bir sürüm. Bu değişken sitenin geliştirildiği sürümü kullanmasını sağlar.
