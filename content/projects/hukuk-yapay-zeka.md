@@ -1,6 +1,6 @@
 ---
 title: "turkhukuku.org"
-description: "Türk hukukuna özel bir yapay zeka asistanı: avukatların dava, duruşma ve evrak takibini Türk hukukuna özel bir yapay zekayla aynı masaüstü uygulamasında birleştiren bir girişim."
+description: "Türk hukukuna özel bir yapay zeka asistanı: avukatların dava, duruşma ve evrak takibini yapay zekayla aynı masaüstü uygulamasında birleştiren bir girişim."
 status: "slip"
 years: "2026 –"
 role: "Kurucu ortak ve yazılım mimarı"

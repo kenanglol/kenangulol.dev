@@ -1,7 +1,7 @@
 ---
 title: "turkhukuku.org"
 slug: "turkish-law-ai"
-description: "An AI assistant for Turkish law: a start-up bringing lawyers' case, hearing and document tracking together with an AI built for Turkish law, in one desktop app."
+description: "An AI assistant for Turkish law: a start-up bringing lawyers' case, hearing and document tracking together with AI in one desktop app."
 status: "slip"
 years: "2026 –"
 role: "Co-founder and software architect"
