@@ -13,7 +13,7 @@ ports:
     role: "Bilgisayar Mühendisliği (Lisans)"
     when: "2017 – 2021"
     where: "İzmir"
-    text: "GNO 3,48 / 4,00. Bitirme projesi: borsa endeksi ve hisse fiyatı tahmini için hibrit derin öğrenme modeli."
+    text: "GNO 3,48 / 4,00. Bitirme tezi: borsa endeksi ve hisse fiyatı tahmini için [hibrit bir derin öğrenme modeli](/projeler/bitirme-projesi/), TÜBİTAK 2209-A desteğiyle."
   - name: "Yapı Kredi Teknoloji"
     role: "Yazılım Mühendisi"
     when: "Eyl 2020 – Eyl 2022"
