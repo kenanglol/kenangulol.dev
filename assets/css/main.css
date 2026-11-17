@@ -25,22 +25,28 @@
   /* Named palette */
   --derin: #0f3a40;      /* deep water, the CV teal taken one fathom down */
   --kanal: #1d5257;      /* the CV teal */
-  --sig: #d6e7e2;        /* shallow-water tint printed along coasts */
   --harita: #f1f4ef;     /* chart paper, cool not cream */
   --murekkep: #17262b;   /* ink */
   --fener: #a8326e;      /* chart magenta for lights and buoys */
   --zeytin: #6c7839;     /* olive leaf */
 
-  --bg: var(--harita);
-  --text: var(--murekkep);
-  --muted: #56676a;
-  --rule: #cbd7d1;
-  --link: var(--kanal);
-  --link-line: #9cc4bd;
-  --accent: var(--fener);
-  --quote: var(--zeytin);
-  --code-bg: #10292d;
+  /* Each colour is light-dark(light, dark). The scheme comes from the
+     visitor's system unless they pick one with the theme button. */
+  color-scheme: light dark;
+  --sig: light-dark(#d6e7e2, #15353a);
+  --bg: light-dark(var(--harita), #0b2024);
+  --text: light-dark(var(--murekkep), #e2eae7);
+  --muted: light-dark(#56676a, #8ea4a3);
+  --rule: light-dark(#cbd7d1, #1f3d42);
+  --link: light-dark(var(--kanal), #9fd2cb);
+  --link-line: light-dark(#9cc4bd, #2f6168);
+  --accent: light-dark(var(--fener), #e98abb);
+  --quote: light-dark(var(--zeytin), #aab86f);
+  --code-bg: light-dark(#10292d, #071619);
   --inline-code: var(--sig);
+  --heading-accent: light-dark(var(--kanal), #9fd2cb);
+  --edge-ink: light-dark(var(--derin), #e2eae7);
+  --edge-paper: light-dark(var(--harita), #0b2024);
 
   --serif: "Literata", Georgia, "Times New Roman", serif;
   --sans: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
@@ -49,21 +55,8 @@
   --wide: 60rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b2024;
-    --text: #e2eae7;
-    --muted: #8ea4a3;
-    --rule: #1f3d42;
-    --link: #9fd2cb;
-    --link-line: #2f6168;
-    --accent: #e98abb;
-    --quote: #aab86f;
-    --code-bg: #071619;
-    --inline-code: #15353a;
-    --sig: #15353a;
-  }
-}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -114,6 +107,14 @@ p { margin: 0 0 1.15em; }
 .nav a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 var(--accent); }
 .lang-switch { font-weight: 600; letter-spacing: 0.04em; }
 
+/* Theme button: a light's sector, half lit and half dark */
+.theme-toggle { display: inline-grid; place-items: center; align-self: center; width: 2rem; height: 2rem; margin: 0 -0.35rem 0 -0.5rem; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--muted); cursor: pointer; }
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle svg { width: 1.15rem; height: 1.15rem; transition: transform 0.4s ease; }
+:root[data-theme="dark"] .theme-toggle svg { transform: rotate(180deg); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle svg { transform: rotate(180deg); } }
+@media (prefers-reduced-motion: reduce) { .theme-toggle svg { transition: none; } }
+
 /* ---------- Home: the chart ---------- */
 .chart-hero {
   position: relative;
@@ -158,8 +159,7 @@ p { margin: 0 0 1.15em; }
 .chart-role::before { content: ""; width: 0.7rem; height: 1.1rem; background: var(--fener); clip-path: polygon(50% 0, 100% 100%, 50% 80%, 0 100%); transform: rotate(-35deg); flex: none; }
 
 /* Chart border: the alternating latitude scale printed along a chart's edge */
-.chart-edge { height: 7px; background: repeating-linear-gradient(90deg, var(--derin) 0 3rem, var(--harita) 3rem 6rem); border-bottom: 1px solid var(--derin); }
-@media (prefers-color-scheme: dark) { .chart-edge { background: repeating-linear-gradient(90deg, #e2eae7 0 3rem, #0b2024 3rem 6rem); border-bottom-color: #e2eae7; } }
+.chart-edge { height: 7px; background: repeating-linear-gradient(90deg, var(--edge-ink) 0 3rem, var(--edge-paper) 3rem 6rem); border-bottom: 1px solid var(--edge-ink); }
 
 .intro { padding-block: 2.75rem 1rem; }
 .intro p { font-size: 1.25rem; line-height: 1.65; }
@@ -212,13 +212,12 @@ pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
 
 /* ---------- CV ---------- */
 .cv { padding-block: 3rem 4.5rem; }
-.cv-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--kanal); }
+.cv-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--heading-accent); }
 .cv-header h1 { margin-bottom: 0.25rem; }
 .cv-role { font-family: var(--sans); font-size: 1.2rem; font-weight: 500; color: var(--muted); margin: 0 0 0.6rem; }
 .cv-contact { font-family: var(--sans); font-size: 1.02rem; margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
 .cv-contact span { color: var(--muted); }
-.cv-body h2 { font-family: var(--sans); font-size: 1.3rem; font-weight: 600; color: var(--kanal); margin-top: 2.5rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule); }
-@media (prefers-color-scheme: dark) { .cv-header { border-bottom-color: var(--link); } .cv-body h2 { color: var(--link); } }
+.cv-body h2 { font-family: var(--sans); font-size: 1.3rem; font-weight: 600; color: var(--heading-accent); margin-top: 2.5rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule); }
 .cv-body h3 { font-size: 1.15rem; margin-top: 1.6rem; margin-bottom: 0.1rem; }
 .cv-body h3 + p { font-family: var(--sans); color: var(--muted); margin-bottom: 0.6rem; }
 .cv-body h4 { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; margin: 1.1rem 0 0.3rem; }
@@ -240,7 +239,7 @@ pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
 
 /* ---------- Print: the CV prints as a clean document ---------- */
 @media print {
-  :root { --bg: #fff; --text: #111; --muted: #444; --link: #111; --rule: #bbb; }
+  :root, :root[data-theme] { color-scheme: light; --bg: #fff; --text: #111; --muted: #444; --link: #111; --rule: #bbb; --heading-accent: #1d5257; }
   body { font-size: 10.5pt; line-height: 1.45; }
   .site-header, .site-footer, .no-print, .skip-link, .comments, .back { display: none !important; }
   .wrap { max-width: none; padding: 0; }

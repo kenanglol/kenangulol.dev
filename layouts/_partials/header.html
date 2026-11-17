@@ -16,6 +16,13 @@
           <a class="lang-switch" href="{{ $target }}" hreflang="{{ $lang.Locale }}" lang="{{ $lang.Locale }}" title="{{ $lang.Label }}">{{ upper $lang.Lang }}</a>
         {{- end }}
       {{- end }}
+      <button class="theme-toggle" type="button" hidden
+        data-label-dark="{{ i18n "themeToDark" }}" data-label-light="{{ i18n "themeToLight" }}">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2a8 8 0 0 0 0 16z" fill="currentColor"/></svg>
+      </button>
     </nav>
   </div>
 </header>
+
+{{- $js := resources.Get "js/theme.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
