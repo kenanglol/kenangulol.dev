@@ -1,7 +1,7 @@
 ---
-title: "AI assistant for Turkish law"
+title: "turkhukuku.org"
 slug: "turkish-law-ai"
-description: "A start-up bringing lawyers' case, hearing and document tracking together with an AI built for Turkish law, in one desktop app."
+description: "An AI assistant for Turkish law: a start-up bringing lawyers' case, hearing and document tracking together with an AI built for Turkish law, in one desktop app."
 status: "slip"
 years: "2026 –"
 role: "Co-founder and software architect"
@@ -9,7 +9,7 @@ stack: ["Tauri", "React", "TypeScript", "PostgreSQL", "pgvector", "Python", "MCP
 weight: 1
 ---
 
-A legal-tech start-up that lawyers and developers are building together, not yet released. Today lawyers track their cases in one place and research case law and legislation in others. We bring these into a single desktop app: each case becomes its own workspace with its documents, hearings and notes, and the AI answers within that case's context, backed by the relevant statutes and precedents. When it doesn't know something, it asks rather than guesses.
+turkhukuku.org is a legal-tech start-up that lawyers and developers are building together, not yet released. Today lawyers track their cases in one place and research case law and legislation in others. We bring these into a single desktop app: each case becomes its own workspace with its documents, hearings and notes, and the AI answers within that case's context, backed by the relevant statutes and precedents. When it doesn't know something, it asks rather than guesses.
 
 I am a co-founder and the software architect, responsible for architecture, data pipelines, the AI infrastructure and the release process. We built two pipelines for public legal data. The first narrows more than ten million court decisions down to the most influential through citation analysis, strips personal data and makes hundreds of thousands of passages searchable with hybrid search; a single fix to the query plan took search time from minutes to milliseconds. The second turns all of Turkish legislation into a versioned database at the level of articles, paragraphs and clauses. The lawyers' request to see "the statute first, then the decisions" shaped that data model directly.
 
