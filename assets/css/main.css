@@ -52,7 +52,7 @@
   --sans: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
   --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   --measure: 37rem;
-  --wide: 60rem;
+  --wide: calc(var(--measure) + 3rem); /* one centred column: header, hero label, text and footer share its edges */
 }
 
 :root[data-theme="light"] { color-scheme: light; }

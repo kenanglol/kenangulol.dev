@@ -90,4 +90,4 @@ pip install numpy scikit-image
 python tools/make_chart.py --seed 7
 ```
 
-Komut `assets/img/chart.svg` dosyasını yeniden yazar. İsim yazısının durduğu sol alt köşe her zaman açık deniz olarak bırakılır.
+Komut `assets/img/chart.svg` dosyasını yeniden yazar. İsim yazısının durduğu alt bölge her zaman açık deniz olarak bırakılır.

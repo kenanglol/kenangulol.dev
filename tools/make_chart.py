@@ -78,7 +78,7 @@ def main() -> None:
         if val > -0.08:
             continue
         # Keep the lower-left open water clear: the name is lettered there
-        if gx < NX * 0.62 and gy > NY * 0.55:
+        if gx < NX * 0.74 and gy > NY * 0.55:
             continue
         sx, sy = gx * SCALE, gy * SCALE
         if any((sx - px) ** 2 + (sy - py) ** 2 < 70 ** 2 for px, py in placed):
