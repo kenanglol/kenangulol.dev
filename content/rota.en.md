@@ -8,7 +8,7 @@ location: "Istanbul, Türkiye"
 pdf: "/files/kenan-gulol-cv-en.pdf"
 lead: >
   I build banking and payment systems in Java and Spring Boot. This page charts
-  the ports I have called at so far, starting in İzmir at Ege University.
+  the ports I have called at so far, newest first. The course began in İzmir, at Ege University.
 ports:
   - name: "Ege University"
     role: "B.Sc. Computer Engineering"

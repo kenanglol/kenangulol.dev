@@ -7,7 +7,7 @@ location: "İstanbul, Türkiye"
 pdf: "/files/kenan-gulol-cv-tr.pdf"
 lead: >
   Java ve Spring Boot ile bankacılık ve ödeme sistemleri geliştiriyorum. Bu sayfa
-  şimdiye kadar uğradığım limanlar: rota İzmir'de, Ege Üniversitesi'nde başlıyor.
+  şimdiye kadar uğradığım limanlar, en yenisi en üstte. Rota İzmir'de, Ege Üniversitesi'nde başladı.
 ports:
   - name: "Ege Üniversitesi"
     role: "Bilgisayar Mühendisliği (Lisans)"

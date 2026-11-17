@@ -82,7 +82,7 @@ Yazı burada başlar.
 - Her proje `content/projects/` altında bir dosyadır (`ad.md` ve `ad.en.md`). Türkçe adres `/projeler/ad/` olur.
 - Projenin durumu `status` alanıyla belirlenir: `slip` (kızakta, yapımı sürüyor), `sea` (denizde, yayında), `harbour` (limanda, tamamlandı). Sıralama `weight` ile yapılır.
 - `stack` kullanılan teknolojilerin listesidir, `repo` doldurulursa sayfada **Kaynak kodu** düğmesi çıkar.
-- Kariyer ve eğitim `content/rota.md` ve `rota.en.md` dosyalarındaki `ports` listesindedir. Her liman bir iş yeri ya da okuldur, `current: true` olan şu anki konum olarak işaretlenir. Eski `/cv/` adresi Rota sayfasına yönlendirir.
+- Kariyer ve eğitim `content/rota.md` ve `rota.en.md` dosyalarındaki `ports` listesindedir. Her liman bir iş yeri ya da okuldur; dosyada eskiden yeniye yazılır, sayfada en yenisi en üstte gösterilir. `current: true` olan şu anki konum olarak işaretlenir. Eski `/cv/` adresi Rota sayfasına yönlendirir.
 
 ## 7. E-posta (isteğe bağlı)
 
