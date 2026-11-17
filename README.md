@@ -1,8 +1,8 @@
 # kenangulol.dev
 
-Source of [kenangulol.dev](https://kenangulol.dev), my personal site: posts and CV, in Turkish and English.
+Source of [kenangulol.dev](https://kenangulol.dev), my personal site: posts, projects and my career route, in Turkish and English.
 
-The site is a logbook drawn on an Aegean chart. The home page opens on a nautical chart generated from code, and posts are listed like logbook entries.
+The site is a logbook drawn on an Aegean chart. The home page opens on a nautical chart generated from code, posts are listed like logbook entries, and each section opens with a small drawing from a chart's margin: a compass rose, a boat on the slip, a harbour plan, a lighthouse.
 
 ## Stack
 
@@ -16,12 +16,14 @@ The site is a logbook drawn on an Aegean chart. The home page opens on a nautica
 
 ```
 content/            posts and pages; Turkish is the default, English uses the .en.md suffix
-layouts/            templates (baseof, home, list, single, cv, 404) and partials
+layouts/            templates (baseof, home, list, single, rota, projects/, 404) and partials
 assets/css/         site styles and syntax highlighting
 assets/img/chart.svg   the generated chart on the home page
+assets/img/vignettes/  the generated page drawings
 i18n/               interface strings per language
 static/fonts/       self-hosted font files
 tools/make_chart.py    generator for the chart
+tools/make_vignettes.py  generator for the page drawings
 ```
 
 ## Local development
@@ -37,6 +39,7 @@ hugo --gc --minify  # production build into public/
 pip install numpy scikit-image
 python tools/make_chart.py            # default sea
 python tools/make_chart.py --seed 7   # a different coastline
+python tools/make_vignettes.py        # page drawings, no dependencies
 ```
 
 Setup notes for deployment, comments and the domain are in [KURULUM.md](KURULUM.md) (Turkish).

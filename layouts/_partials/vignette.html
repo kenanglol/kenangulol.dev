@@ -1,0 +1,2 @@
+{{- /* Inlines a drawing from assets/img/vignettes/; context is its name */}}
+{{- with resources.Get (printf "img/vignettes/%s.svg" .) }}{{ .Content | safeHTML }}{{ end }}

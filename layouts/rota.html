@@ -1,0 +1,47 @@
+{{ define "main" }}
+<div class="wrap">
+  <article class="route-page measure">
+    <header class="page-head">
+      {{ partial "vignette.html" "route" }}
+      <h1>{{ .Title }}</h1>
+      {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+      <p class="contact-line">{{ with .Params.location }}<span>{{ . }}</span>{{ end }}{{ partial "social.html" . }}</p>
+    </header>
+
+    {{- /* Each port is a fix on the plotted course; the current one is lit */}}
+    <ol class="route" aria-label="{{ i18n "routeTitle" }}">
+      {{- range .Params.ports }}
+      <li class="port{{ if .current }} is-current{{ end }}">
+        <p class="port-when"><span>{{ .when }}</span>{{ with .where }}<span>{{ . }}</span>{{ end }}</p>
+        <h2 class="port-name">{{ .name }}</h2>
+        {{- with .role }}<p class="port-role">{{ . }}</p>{{ end }}
+        {{- with .text }}<p>{{ $.RenderString . }}</p>{{ end }}
+        {{- with .items }}<ul>{{ range . }}<li>{{ $.RenderString . }}</li>{{ end }}</ul>{{ end }}
+        {{- range .legs }}
+        <div class="leg">
+          <h3>{{ .name }}</h3>
+          <p class="port-when"><span>{{ .when }}</span></p>
+          <ul>{{ range .items }}<li>{{ $.RenderString . }}</li>{{ end }}</ul>
+        </div>
+        {{- end }}
+        {{- if .current }}<p class="port-here">{{ i18n "currentPort" }}</p>{{ end }}
+      </li>
+      {{- end }}
+    </ol>
+
+    <div class="prose route-extra">
+      {{ .Content }}
+      {{- with site.GetPage "/projects" }}
+      <p>{{ i18n "sideProjects" (dict "URL" .RelPermalink) | $.RenderString }}</p>
+      {{- end }}
+    </div>
+
+    {{- /* The PDF button appears only once the file exists under static/ */}}
+    {{- with .Params.pdf }}
+      {{- if fileExists (printf "static%s" .) }}
+      <p class="no-print"><a class="button" href="{{ . | relURL }}" download>{{ i18n "downloadPdf" }}</a></p>
+      {{- end }}
+    {{- end }}
+  </article>
+</div>
+{{ end }}

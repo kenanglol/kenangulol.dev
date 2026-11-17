@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="wrap">
+  <article class="post measure">
+    <header class="post-header">
+      <p class="post-meta project-state">{{ partial "project-state.html" . }}{{ with .Params.role }}<span>{{ . }}</span>{{ end }}</p>
+      <h1>{{ .Title }}</h1>
+      {{- with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+    </header>
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- with .Params.stack }}<p class="stack">{{ delimit . ", " }}</p>{{ end }}
+    {{- with .Params.repo }}<p><a class="button" href="{{ . }}" rel="noopener">{{ i18n "sourceCode" }}</a></p>{{ end }}
+    {{- with .Parent }}<p class="back"><a href="{{ .RelPermalink }}">{{ i18n "backToProjects" }}</a></p>{{ end }}
+  </article>
+</div>
+{{ end }}

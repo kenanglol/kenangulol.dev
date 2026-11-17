@@ -50,9 +50,9 @@ Canva'dan iki CV'yi **PDF** olarak indir ve şu adlarla `static/files/` klasör�
 - `static/files/kenan-gulol-cv-tr.pdf`
 - `static/files/kenan-gulol-cv-en.pdf`
 
-Dosyalar eklenince CV sayfalarında **PDF olarak indir** düğmesi kendiliğinden görünür. Dosya yokken düğme gösterilmez.
+Dosyalar eklenince Rota sayfasının sonunda **PDF olarak indir** düğmesi kendiliğinden görünür. Dosya yokken düğme gösterilmez.
 
-Not: Web sitesindeki CV sayfasında telefon numarası bilerek yok. Herkese açık bir sayfada numara spam ve arama robotlarına açık olur.
+Not: Rota sayfasında telefon numarası bilerek yok. Herkese açık bir sayfada numara spam ve arama robotlarına açık olur.
 
 ## 5. Yazı yazma
 
@@ -77,13 +77,22 @@ Yazı burada başlar.
 
 `content/posts/ilk-kayit.md` ve `ilk-kayit.en.md` örnek yazılardır. İstediğin gibi düzenle ya da sil.
 
-## 6. E-posta (isteğe bağlı)
+## 6. Projeler ve rota
+
+- Her proje `content/projects/` altında bir dosyadır (`ad.md` ve `ad.en.md`). Türkçe adres `/projeler/ad/` olur.
+- Projenin durumu `status` alanıyla belirlenir: `slip` (kızakta, yapımı sürüyor), `sea` (denizde, yayında), `harbour` (limanda, tamamlandı). Sıralama `weight` ile yapılır.
+- `stack` kullanılan teknolojilerin listesidir, `repo` doldurulursa sayfada **Kaynak kodu** düğmesi çıkar.
+- Kariyer ve eğitim `content/rota.md` ve `rota.en.md` dosyalarındaki `ports` listesindedir. Her liman bir iş yeri ya da okuldur, `current: true` olan şu anki konum olarak işaretlenir. Eski `/cv/` adresi Rota sayfasına yönlendirir.
+
+## 7. E-posta (isteğe bağlı)
 
 Cloudflare **Email Routing** ile `iletisim@kenangulol.dev` gibi bir adresi Proton adresine yönlendirebilirsin. Sonra `hugo.toml` içindeki `email` değerini yeni adresle değiştir.
 
-## 7. Ana sayfadaki harita
+## 8. Çizimler
 
-Haritayı `tools/make_chart.py` üretir. Farklı bir kıyı şeridi istersen:
+Ana sayfadaki haritayı `tools/make_chart.py`, sayfalardaki çizimleri (pusula gülü, kızaktaki tekne, liman planı, deniz feneri) `tools/make_vignettes.py` üretir. `python tools/make_vignettes.py` çizimleri `assets/img/vignettes/` klasörüne yeniden yazar.
+
+Harita için: Farklı bir kıyı şeridi istersen:
 
 ```sh
 pip install numpy scikit-image

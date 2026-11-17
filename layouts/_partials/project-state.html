@@ -1,0 +1,4 @@
+{{- /* Status and years of a project page */}}
+{{- $labels := dict "slip" (i18n "statusSlip") "sea" (i18n "statusSea") "harbour" (i18n "statusHarbour") }}
+{{- with .Params.status }}<span class="state state-{{ . }}">{{ index $labels . }}</span>{{ end }}
+{{- with .Params.years }}<span>{{ . }}</span>{{ end }}

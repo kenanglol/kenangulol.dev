@@ -25,7 +25,7 @@
   /* Named palette */
   --derin: #0f3a40;      /* deep water, the CV teal taken one fathom down */
   --kanal: #1d5257;      /* the CV teal */
-  --harita: #f1f4ef;     /* chart paper, cool not cream */
+  --harita: #e6ebe5;     /* chart paper: cool, and dimmed so long reading is easy on the eyes */
   --murekkep: #17262b;   /* ink */
   --fener: #a8326e;      /* chart magenta for lights and buoys */
   --zeytin: #6c7839;     /* olive leaf */
@@ -33,13 +33,13 @@
   /* Each colour is light-dark(light, dark). The scheme comes from the
      visitor's system unless they pick one with the theme button. */
   color-scheme: light dark;
-  --sig: light-dark(#d6e7e2, #15353a);
+  --sig: light-dark(#d3e2dd, #15353a);
   --bg: light-dark(var(--harita), #0b2024);
   --text: light-dark(var(--murekkep), #e2eae7);
   --muted: light-dark(#56676a, #8ea4a3);
-  --rule: light-dark(#cbd7d1, #1f3d42);
+  --rule: light-dark(#c3cfc9, #1f3d42);
   --link: light-dark(var(--kanal), #9fd2cb);
-  --link-line: light-dark(#9cc4bd, #2f6168);
+  --link-line: light-dark(#8fbab3, #2f6168);
   --accent: light-dark(var(--fener), #e98abb);
   --quote: light-dark(var(--zeytin), #aab86f);
   --code-bg: light-dark(#10292d, #071619);
@@ -47,6 +47,9 @@
   --heading-accent: light-dark(var(--kanal), #9fd2cb);
   --edge-ink: light-dark(var(--derin), #e2eae7);
   --edge-paper: light-dark(var(--harita), #0b2024);
+  --illus-ink: light-dark(var(--kanal), #9fd2cb);
+  --illus-water: light-dark(#7fb0a9, #2f6168);
+  --illus-land: light-dark(#d0dfd9, #15353a);
 
   --serif: "Literata", Georgia, "Times New Roman", serif;
   --sans: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
@@ -179,7 +182,7 @@ p { margin: 0 0 1.15em; }
   .log-entry { grid-template-columns: 1fr; }
 }
 
-.page-head { padding-block: 3rem 1.5rem; }
+.page-head { padding-block: 2.5rem 1.5rem; }
 .page-head .lead { color: var(--muted); font-size: 1.15rem; margin-top: 0.75rem; }
 
 /* ---------- Article ---------- */
@@ -211,25 +214,47 @@ pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
 .comments h2 { font-family: var(--sans); font-size: 1.15rem; color: var(--muted); margin-top: 0; }
 
 /* ---------- CV ---------- */
-.cv { padding-block: 3rem 4.5rem; }
-.cv-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; padding-bottom: 1.25rem; margin-bottom: 0.5rem; border-bottom: 2px solid var(--heading-accent); }
-.cv-header h1 { margin-bottom: 0.25rem; }
-.cv-role { font-family: var(--sans); font-size: 1.2rem; font-weight: 500; color: var(--muted); margin: 0 0 0.6rem; }
-.cv-contact { font-family: var(--sans); font-size: 1.02rem; margin: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
-.cv-contact span { color: var(--muted); }
-.cv-body h2 { font-family: var(--sans); font-size: 1.3rem; font-weight: 600; color: var(--heading-accent); margin-top: 2.5rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule); }
-.cv-body h3 { font-size: 1.15rem; margin-top: 1.6rem; margin-bottom: 0.1rem; }
-.cv-body h3 + p { font-family: var(--sans); color: var(--muted); margin-bottom: 0.6rem; }
-.cv-body h4 { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; margin: 1.1rem 0 0.3rem; }
-.cv-body ul { padding-left: 1.2rem; }
-.cv-body li { margin-bottom: 0.35rem; }
-.cv-body li::marker { color: var(--zeytin); }
+/* ---------- Route: career and education as ports on a plotted course ---------- */
+.contact-line { font-family: var(--sans); font-size: 1.02rem; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+.contact-line span { color: var(--muted); }
+.route-page { padding-bottom: 4.5rem; }
+.route { list-style: none; margin: 1.5rem 0 1rem; padding: 0; }
+.port { position: relative; padding: 0 0 2.75rem 2.6rem; }
+/* the course line between fixes */
+.port::before { content: ""; position: absolute; left: calc(0.6rem - 0.75px); top: 1.5rem; bottom: 0.2rem; width: 1.5px;
+  background: repeating-linear-gradient(to bottom, var(--illus-ink) 0 6px, transparent 6px 11px); }
+.port:last-child::before { display: none; }
+/* the fix: a circle with a dot, as plotted on a chart */
+.port::after { content: ""; position: absolute; left: 0; top: 0.2rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; box-sizing: border-box;
+  border: 1.5px solid var(--illus-ink); background: radial-gradient(circle, var(--illus-ink) 0 2px, var(--bg) 2.5px); }
+.port.is-current::after { border-color: var(--accent); background: radial-gradient(circle, var(--accent) 0 3.5px, var(--bg) 4px); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); }
+.port-when { font-family: var(--sans); color: var(--muted); font-size: 1rem; margin: 0; display: flex; flex-wrap: wrap; gap: 0 1rem; font-variant-numeric: tabular-nums; }
+.port-name { font-size: 1.5rem; margin: 0.15rem 0 0.1rem; }
+.port-role { font-family: var(--sans); font-size: 1.12rem; font-weight: 500; color: var(--heading-accent); margin: 0 0 0.75rem; }
+.port p { margin-block: 0 0.6rem; }
+.port ul { padding-left: 1.2rem; margin: 0.4rem 0 0; }
+.port li { margin-bottom: 0.4rem; }
+.port li::marker { color: var(--quote); }
+.leg h3 { font-family: var(--sans); font-size: 1.08rem; font-weight: 600; margin: 1.4rem 0 0.1rem; }
+.port-here { font-family: var(--sans); font-weight: 600; color: var(--accent); margin-top: 1rem !important; }
+.route-extra h2 { font-family: var(--sans); font-size: 1.3rem; font-weight: 600; color: var(--heading-accent); margin-top: 2rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--rule); }
+
+/* ---------- Projects ---------- */
+.project-state { display: flex; flex-direction: column; gap: 0.1rem; }
+.post-meta.project-state { flex-direction: row; gap: 0 1.25rem; margin: 0 0 0.75rem; }
+.state { display: inline-flex; align-items: center; gap: 0.45rem; font-weight: 600; color: var(--text); }
+.state::before { content: ""; width: 0.6rem; height: 0.6rem; border-radius: 50%; flex: none; }
+.state-slip::before { background: var(--accent); }
+.state-sea::before { background: var(--link); }
+.state-harbour::before { border: 1.5px solid var(--muted); box-sizing: border-box; }
+.stack { font-family: var(--sans); color: var(--muted); font-size: 1rem; margin: 0.5rem 0 0; }
+.post .stack { margin: 2rem 0 1rem; }
+.post-header .lead { color: var(--muted); font-size: 1.2rem; margin-top: 0.9rem; }
 
 .button { display: inline-block; font-family: var(--sans); font-weight: 600; font-size: 1.02rem; padding: 0.55rem 1.1rem; border-radius: 3px; background: var(--kanal); color: #f1f4ef; text-decoration: none; }
 .button:hover { background: var(--fener); color: #fff; }
 
-.not-found { padding-block: 5rem; }
-.not-found .depth { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(4rem, 14vw, 8rem); letter-spacing: 0.06em; color: var(--kanal); line-height: 1; margin: 0 0 1rem; }
+.not-found { padding-block: 3rem 5rem; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--rule); font-family: var(--sans); color: var(--muted); font-size: 1rem; }
@@ -237,14 +262,38 @@ pre code { background: none; padding: 0; font-size: inherit; color: inherit; }
 .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
 .footer-links a { color: var(--muted); }
 
+/* ---------- Vignettes: the coastal views and plans from a chart's margin ---------- */
+.vignette { display: block; width: 100%; height: auto; overflow: visible; }
+.page-head .vignette, .not-found .vignette { margin-bottom: 1.75rem; }
+.vignette .ink { fill: none; stroke: var(--illus-ink); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.vignette .thin { stroke-width: 0.9; }
+.vignette .water { stroke: var(--illus-water); }
+.vignette .paper { fill: var(--bg); }
+.vignette .land { fill: var(--illus-land); }
+.vignette .inkfill { fill: var(--illus-ink); }
+.vignette .light { fill: var(--fener); }
+.vignette .mole { stroke-width: 4.5; }
+.vignette .course { stroke-dasharray: 6 5; }
+.vignette .label { font-family: var(--serif); font-style: italic; font-size: 16px; fill: var(--muted); stroke: none; }
+.vignette .label-light { fill: var(--accent); }
+.vignette .beam { fill: var(--fener); opacity: 0.12; }
+@media (prefers-reduced-motion: no-preference) {
+  /* Fl(2) 10s: two short flashes, then darkness, every ten seconds */
+  .vignette .beam { opacity: 0; animation: flash 10s infinite; }
+  .vignette .lamp { animation: lamp 10s infinite; }
+}
+@keyframes flash { 0%, 1% { opacity: 0.28; } 4%, 8% { opacity: 0; } 9%, 10% { opacity: 0.28; } 13%, 100% { opacity: 0; } }
+@keyframes lamp { 0%, 1% { opacity: 1; } 4%, 8% { opacity: 0.35; } 9%, 10% { opacity: 1; } 13%, 100% { opacity: 0.35; } }
+
 /* ---------- Print: the CV prints as a clean document ---------- */
 @media print {
   :root, :root[data-theme] { color-scheme: light; --bg: #fff; --text: #111; --muted: #444; --link: #111; --rule: #bbb; --heading-accent: #1d5257; }
   body { font-size: 10.5pt; line-height: 1.45; }
   .site-header, .site-footer, .no-print, .skip-link, .comments, .back { display: none !important; }
   .wrap { max-width: none; padding: 0; }
-  .cv, .post { padding: 0; }
+  .post, .route-page, .page-head { padding: 0; }
+  .vignette { display: none; }
   a { text-decoration: none; }
-  .cv-body h2 { break-after: avoid; }
-  .cv-body li, .cv-body h3 { break-inside: avoid; }
+  .port-name, .leg h3 { break-after: avoid; }
+  .port li { break-inside: avoid; }
 }

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="wrap">
   <section class="not-found measure">
-    <p class="depth" aria-hidden="true">404</p>
+    {{ partial "vignette.html" "lighthouse" }}
     <h1>{{ i18n "notFoundTitle" }}</h1>
     <p class="muted">{{ i18n "notFoundText" }}</p>
     <p><a class="button" href="{{ site.Home.RelPermalink }}">{{ i18n "goHome" }}</a></p>

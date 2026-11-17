@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="wrap">
+  <div class="measure">
+    <header class="page-head">
+      {{ partial "vignette.html" "projects" }}
+      <h1>{{ .Title }}</h1>
+      {{- with .Content }}<div class="lead">{{ . }}</div>{{ end }}
+    </header>
+    <section class="log">
+      <ol class="log-list">
+        {{- range .Pages.ByWeight }}
+        <li class="log-entry">
+          <p class="log-date project-state">{{ partial "project-state.html" . }}</p>
+          <div>
+            <a class="log-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{- with .Description }}<p class="log-summary">{{ . }}</p>{{ end }}
+            {{- with .Params.stack }}<p class="stack">{{ delimit . ", " }}</p>{{ end }}
+          </div>
+        </li>
+        {{- end }}
+      </ol>
+    </section>
+  </div>
+</div>
+{{ end }}

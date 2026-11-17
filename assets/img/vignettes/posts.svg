@@ -1,0 +1,39 @@
+<svg class="vignette" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<circle class="ink thin" cx="482" cy="100" r="82"/>
+<circle class="ink thin" cx="482" cy="100" r="72"/>
+<path class="ink thin" d="M482,34 L482,18 M488.6,24.3 L489.1,18.3 M494.5,29.1 L496.2,19.2 M501.7,26.6 L503.2,20.8 M506.6,32.3 L510,22.9 M514.1,31.1 L516.7,25.7 M515,42.8 L523,29 M525.6,37.7 L529,32.8 M528.3,44.8 L534.7,37.2 M535.7,46.3 L540,42 M537.2,53.7 L544.8,47.3 M544.3,56.4 L549.2,53 M539.2,67 L553,59 M550.9,67.9 L556.3,65.3 M549.7,75.4 L559.1,72 M555.4,80.3 L561.2,78.8 M552.9,87.5 L562.8,85.8 M557.7,93.4 L563.7,92.9 M548,100 L564,100 M557.7,106.6 L563.7,107.1 M552.9,112.5 L562.8,114.2 M555.4,119.7 L561.2,121.2 M549.7,124.6 L559.1,128 M550.9,132.1 L556.3,134.7 M539.2,133 L553,141 M544.3,143.6 L549.2,147 M537.2,146.3 L544.8,152.7 M535.7,153.7 L540,158 M528.3,155.2 L534.7,162.8 M525.6,162.3 L529,167.2 M515,157.2 L523,171 M514.1,168.9 L516.7,174.3 M506.6,167.7 L510,177.1 M501.7,173.4 L503.2,179.2 M494.5,170.9 L496.2,180.8 M488.6,175.7 L489.1,181.7 M482,166 L482,182 M475.4,175.7 L474.9,181.7 M469.5,170.9 L467.8,180.8 M462.3,173.4 L460.8,179.2 M457.4,167.7 L454,177.1 M449.9,168.9 L447.3,174.3 M449,157.2 L441,171 M438.4,162.3 L435,167.2 M435.7,155.2 L429.3,162.8 M428.3,153.7 L424,158 M426.8,146.3 L419.2,152.7 M419.7,143.6 L414.8,147 M424.8,133 L411,141 M413.1,132.1 L407.7,134.7 M414.3,124.6 L404.9,128 M408.6,119.7 L402.8,121.2 M411.1,112.5 L401.2,114.2 M406.3,106.6 L400.3,107.1 M416,100 L400,100 M406.3,93.4 L400.3,92.9 M411.1,87.5 L401.2,85.8 M408.6,80.3 L402.8,78.8 M414.3,75.4 L404.9,72 M413.1,67.9 L407.7,65.3 M424.8,67 L411,59 M419.7,56.4 L414.8,53 M426.8,53.7 L419.2,47.3 M428.3,46.3 L424,42 M435.7,44.8 L429.3,37.2 M438.4,37.7 L435,32.8 M449,42.8 L441,29 M449.9,31.1 L447.3,25.7 M457.4,32.3 L454,22.9 M462.3,26.6 L460.8,20.8 M469.5,29.1 L467.8,19.2 M475.4,24.3 L474.9,18.3"/>
+<path class="paper ink thin" d="M482,100 L473,100 L482,40 Z"/>
+<path class="light" d="M482,100 L491,100 L482,40 Z"/>
+<path class="paper ink thin" d="M482,100 L477.8,95.8 L506,76 Z"/>
+<path class="inkfill" d="M482,100 L486.2,104.2 L506,76 Z"/>
+<path class="paper ink thin" d="M482,100 L482,91 L542,100 Z"/>
+<path class="inkfill" d="M482,100 L482,109 L542,100 Z"/>
+<path class="paper ink thin" d="M482,100 L486.2,95.8 L506,124 Z"/>
+<path class="inkfill" d="M482,100 L477.8,104.2 L506,124 Z"/>
+<path class="paper ink thin" d="M482,100 L491,100 L482,160 Z"/>
+<path class="inkfill" d="M482,100 L473,100 L482,160 Z"/>
+<path class="paper ink thin" d="M482,100 L486.2,104.2 L458,124 Z"/>
+<path class="inkfill" d="M482,100 L477.8,95.8 L458,124 Z"/>
+<path class="paper ink thin" d="M482,100 L482,109 L422,100 Z"/>
+<path class="inkfill" d="M482,100 L482,91 L422,100 Z"/>
+<path class="paper ink thin" d="M482,100 L477.8,104.2 L458,76 Z"/>
+<path class="inkfill" d="M482,100 L486.2,95.8 L458,76 Z"/>
+<circle class="paper ink thin" cx="482" cy="100" r="3.5"/>
+<path class="ink" d="M34,160 L150,132 L272,124 L378,92"/>
+<circle class="paper ink thin" cx="34" cy="160" r="5"/>
+<circle class="inkfill" cx="34" cy="160" r="1.4"/>
+<text class="label" x="34" y="182" text-anchor="middle">0600</text>
+<circle class="paper ink thin" cx="150" cy="132" r="5"/>
+<circle class="inkfill" cx="150" cy="132" r="1.4"/>
+<text class="label" x="150" y="154" text-anchor="middle">0900</text>
+<circle class="paper ink thin" cx="272" cy="124" r="5"/>
+<circle class="inkfill" cx="272" cy="124" r="1.4"/>
+<text class="label" x="272" y="146" text-anchor="middle">1200</text>
+<circle class="paper ink thin" cx="378" cy="92" r="5"/>
+<circle class="inkfill" cx="378" cy="92" r="1.4"/>
+<text class="label" x="378" y="114" text-anchor="middle">1500</text>
+<path class="ink" d="M386,95 L398,87 L384,85"/>
+<path class="ink" d="M211,44 L150,129 M211,44 L272,121"/>
+<path class="ink thin" d="M211,40 L211,28"/>
+<circle class="paper ink thin" cx="211" cy="44" r="4"/>
+</svg>

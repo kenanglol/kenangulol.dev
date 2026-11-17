@@ -2,6 +2,7 @@
 <div class="wrap">
   <div class="measure">
     <header class="page-head">
+      {{- if and (eq .Kind "section") (eq .Section "posts") }}{{ partial "vignette.html" "posts" }}{{ end }}
       <h1>{{ .Title }}</h1>
       {{- with .Content }}<div class="lead">{{ . }}</div>{{ end }}
     </header>

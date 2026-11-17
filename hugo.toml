@@ -25,6 +25,11 @@ enableRobotsTXT = true
     locale = "tr-TR"
     weight = 1
     title = "Kenan Gülol"
+    # Turkish addresses for the projects section: /projeler/<file name>/
+    [languages.tr.permalinks.page]
+      projects = "/projeler/:contentbasename/"
+    [languages.tr.permalinks.section]
+      projects = "/projeler/"
     [languages.tr.params]
       description = "Kıdemli Backend Mühendisi. Java, Spring Boot, ödeme sistemleri ve yapay zeka üzerine yazılar."
       role = "Kıdemli Backend Mühendisi"
@@ -33,9 +38,13 @@ enableRobotsTXT = true
       pageRef = "/posts"
       weight = 1
     [[languages.tr.menus.main]]
-      name = "Özgeçmiş"
-      pageRef = "/cv"
+      name = "Projeler"
+      pageRef = "/projects"
       weight = 2
+    [[languages.tr.menus.main]]
+      name = "Rota"
+      pageRef = "/rota"
+      weight = 3
 
   [languages.en]
     label = "English"
@@ -50,9 +59,13 @@ enableRobotsTXT = true
       pageRef = "/posts"
       weight = 1
     [[languages.en.menus.main]]
-      name = "CV"
-      pageRef = "/cv"
+      name = "Projects"
+      pageRef = "/projects"
       weight = 2
+    [[languages.en.menus.main]]
+      name = "Route"
+      pageRef = "/rota"
+      weight = 3
 
 [markup]
   [markup.highlight]

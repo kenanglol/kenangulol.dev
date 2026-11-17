@@ -1,0 +1,21 @@
+<svg class="vignette" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+<g class="beams"><path class="beam" d="M300,42 L20,14 L20,74 Z"/><path class="beam" d="M300,42 L580,12 L580,76 Z"/></g>
+<path class="ink water thin" d="M0,172 H600"/>
+<path class="ink water thin" d="M9,184 q4,-3 8,0 t8,0 M47,184 q4,-3 8,0 t8,0 M85,184 q4,-3 8,0 t8,0 M123,184 q4,-3 8,0 t8,0 M161,184 q4,-3 8,0 t8,0 M199,184 q4,-3 8,0 t8,0 M237,184 q4,-3 8,0 t8,0 M275,184 q4,-3 8,0 t8,0 M313,184 q4,-3 8,0 t8,0 M351,184 q4,-3 8,0 t8,0 M389,184 q4,-3 8,0 t8,0 M427,184 q4,-3 8,0 t8,0 M465,184 q4,-3 8,0 t8,0 M503,184 q4,-3 8,0 t8,0 M541,184 q4,-3 8,0 t8,0 M579,184 q4,-3 8,0 t8,0 M22,196 q4,-3 8,0 t8,0 M60,196 q4,-3 8,0 t8,0 M98,196 q4,-3 8,0 t8,0 M136,196 q4,-3 8,0 t8,0 M174,196 q4,-3 8,0 t8,0 M212,196 q4,-3 8,0 t8,0 M250,196 q4,-3 8,0 t8,0 M288,196 q4,-3 8,0 t8,0 M326,196 q4,-3 8,0 t8,0 M364,196 q4,-3 8,0 t8,0 M402,196 q4,-3 8,0 t8,0 M440,196 q4,-3 8,0 t8,0 M478,196 q4,-3 8,0 t8,0 M516,196 q4,-3 8,0 t8,0 M554,196 q4,-3 8,0 t8,0 M35,208 q4,-3 8,0 t8,0 M73,208 q4,-3 8,0 t8,0 M111,208 q4,-3 8,0 t8,0 M149,208 q4,-3 8,0 t8,0 M187,208 q4,-3 8,0 t8,0 M225,208 q4,-3 8,0 t8,0 M263,208 q4,-3 8,0 t8,0 M301,208 q4,-3 8,0 t8,0 M339,208 q4,-3 8,0 t8,0 M377,208 q4,-3 8,0 t8,0 M415,208 q4,-3 8,0 t8,0 M453,208 q4,-3 8,0 t8,0 M491,208 q4,-3 8,0 t8,0 M529,208 q4,-3 8,0 t8,0 M567,208 q4,-3 8,0 t8,0"/>
+<path class="land ink" d="M218,174 L230,160 L242,156 L252,146 L266,144 L274,148 L326,148 L338,140 L350,146 L356,156 L370,160 L384,174 Z"/>
+<path class="ink thin" d="M240,166 l10,-6 M352,160 l9,6 M262,158 l6,-4"/>
+<path class="paper ink" d="M276,148 L285,64 L315,64 L324,148 Z"/>
+<path class="inkfill" d="M280.7,104 L282,92 L318,92 L319.3,104 Z"/>
+<path class="inkfill" d="M277.7,132 L279,120 L321,120 L322.3,132 Z"/>
+<path class="paper ink thin" d="M294,148 V137 A6,6 0 0 1 306,137 V148"/>
+<rect class="paper ink thin" x="297" y="74" width="6" height="10"/>
+<path class="ink thin" d="M280,58 V50 H320 V58 M290,50 V58 M300,50 V58 M310,50 V58"/>
+<rect class="paper ink" x="279" y="58" width="42" height="6"/>
+<rect class="paper ink" x="288" y="34" width="24" height="16"/>
+<path class="ink thin" d="M296,34 V50 M304,34 V50"/>
+<path class="paper ink" d="M286,34 Q300,16 314,34 Z"/>
+<path class="ink" d="M300,23 V13"/>
+<circle class="light lamp" cx="300" cy="42" r="4.5"/>
+<text class="label label-light" x="336" y="96">Fl(2) 10s</text>
+<text class="label" x="336" y="113">24m 15M</text>
+</svg>
