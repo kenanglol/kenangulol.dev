@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="wrap">
+  <article class="post measure">
+    <header class="post-header">
+      <h1>{{ .Title }}</h1>
+      {{- if eq .Section "posts" }}
+      <p class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>
+        <span>{{ i18n "readingTime" .ReadingTime }}</span>
+        {{- range .Translations }}
+        <a href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}">{{ .Language.Label }}</a>
+        {{- end }}
+      </p>
+      {{- end }}
+    </header>
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{- with .GetTerms "tags" }}
+    <p class="tags">{{ i18n "tags" }}: {{ range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end }}</p>
+    {{- end }}
+
+    {{- if eq .Section "posts" }}
+    {{ partial "giscus.html" . }}
+    {{- with site.GetPage "/posts" }}<p class="back"><a href="{{ .RelPermalink }}">{{ i18n "backToPosts" }}</a></p>{{ end }}
+    {{- end }}
+  </article>
+</div>
+{{ end }}

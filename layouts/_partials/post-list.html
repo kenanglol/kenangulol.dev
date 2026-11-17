@@ -1,0 +1,16 @@
+{{- /* Expects a collection of pages as context; renders them as logbook entries */}}
+{{- if . }}
+<ol class="log-list" reversed>
+  {{- range . }}
+  <li class="log-entry">
+    <time class="log-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+    <div>
+      <a class="log-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{- with .Description }}<p class="log-summary">{{ . }}</p>{{ end }}
+    </div>
+  </li>
+  {{- end }}
+</ol>
+{{- else }}
+<p class="muted">{{ i18n "noPosts" }}</p>
+{{- end }}

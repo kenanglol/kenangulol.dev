@@ -1,0 +1,69 @@
+baseURL = "https://kenangulol.dev/"
+title = "Kenan Gülol"
+defaultContentLanguage = "tr"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+
+[params]
+  author = "Kenan Gülol"
+  github = "https://github.com/kenanglol"
+  linkedin = "https://www.linkedin.com/in/kenangulol"
+  email = "kenan.gulol1@protonmail.com"
+
+  # Giscus yorumları — değerleri https://giscus.app adresinden alın.
+  # repoId boş kaldığı sürece yorum kutusu sayfaya eklenmez.
+  [params.giscus]
+    repo = "kenanglol/kenangulol.dev"
+    repoId = ""
+    category = "Announcements"
+    categoryId = ""
+    mapping = "pathname"
+
+[languages]
+  [languages.tr]
+    label = "Türkçe"
+    locale = "tr-TR"
+    weight = 1
+    title = "Kenan Gülol"
+    [languages.tr.params]
+      description = "Kıdemli Backend Mühendisi. Java, Spring Boot, ödeme sistemleri ve yapay zeka üzerine yazılar."
+      role = "Kıdemli Backend Mühendisi"
+    [[languages.tr.menus.main]]
+      name = "Yazılar"
+      pageRef = "/posts"
+      weight = 1
+    [[languages.tr.menus.main]]
+      name = "Özgeçmiş"
+      pageRef = "/cv"
+      weight = 2
+
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+    title = "Kenan Gülol"
+    [languages.en.params]
+      description = "Senior Backend Engineer. Writing about Java, Spring Boot, payment systems and AI."
+      role = "Senior Backend Engineer"
+    [[languages.en.menus.main]]
+      name = "Posts"
+      pageRef = "/posts"
+      weight = 1
+    [[languages.en.menus.main]]
+      name = "CV"
+      pageRef = "/cv"
+      weight = 2
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.goldmark.renderer]
+    unsafe = false
+
+[outputs]
+  home = ["html", "rss"]
+  section = ["html", "rss"]
+
+[taxonomies]
+  tag = "tags"

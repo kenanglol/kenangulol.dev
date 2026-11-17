@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="chart-hero">
+  {{ with resources.Get "img/chart.svg" }}{{ .Content | safeHTML }}{{ end }}
+  <div class="wrap chart-label">
+    <h1 class="chart-name">Kenan Gülol</h1>
+    <p class="chart-role">{{ site.Params.role }}</p>
+  </div>
+</section>
+<div class="chart-edge" aria-hidden="true"></div>
+
+<section class="wrap intro">
+  <div class="measure">
+    {{ .Content }}
+    <p class="links">{{ partial "social.html" . }}{{ with site.GetPage "/cv" }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</p>
+  </div>
+</section>
+
+<section class="wrap log">
+  <div class="measure">
+    <h2>{{ i18n "recentPosts" }}</h2>
+    {{- $posts := where site.RegularPages "Section" "posts" }}
+    {{ partial "post-list.html" (first 6 $posts) }}
+    {{- if gt (len $posts) 6 }}
+    {{- with site.GetPage "/posts" }}<p class="log-more"><a href="{{ .RelPermalink }}">{{ i18n "allPosts" }}</a></p>{{ end }}
+    {{- end }}
+  </div>
+</section>
+{{ end }}
