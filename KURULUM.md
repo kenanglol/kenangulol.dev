@@ -11,7 +11,7 @@ Siteyi yayına almak ve yönetmek için gereken adımlar. Sırayla gitmek en kol
    - **Deploy command:** `npx wrangler deploy` (varsayılan, dokunma)
    - **Preview command:** `npx wrangler preview` (varsayılan, dokunma)
 
-   Yayınlanan klasör (`public/`) `wrangler.jsonc` dosyasından okunur.
+   Yayınlanan klasör (`public/`) `wrangler.jsonc` dosyasından okunur. Aynı dosya, build command boş kalsa bile her yayından önce siteyi derler.
 4. Aynı ekranda **Advanced settings → Build variables** altına şu değişkeni ekle (sonradan projenin **Settings → Build** bölümünden de eklenebilir):
    - `HUGO_VERSION` = `0.170.0`
 

@@ -2,8 +2,12 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "kenangulol-dev",
   "compatibility_date": "2026-11-17",
-  // The site is built by the dashboard build command "hugo --gc --minify",
-  // with a HUGO_VERSION build variable. See KURULUM.md.
+  // Wrangler builds the site before every deploy, so a deploy works even if
+  // the dashboard build command is empty. Pin Hugo with a HUGO_VERSION build
+  // variable in the dashboard. See KURULUM.md.
+  "build": {
+    "command": "hugo --gc --minify"
+  },
   "assets": {
     "directory": "./public",
     "html_handling": "auto-trailing-slash",
