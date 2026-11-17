@@ -30,7 +30,7 @@ ports:
   - name: "DefineX"
     role: "Kıdemli Backend Mühendisi"
     when: "Eyl 2023 – Günümüz"
-    where: "Uzaktan, Garanti BBVA danışmanı"
+    where: "Uzaktan, Garanti Teknoloji danışmanı"
     current: true
     text: "2025'te Yazılım Mühendisliğinden Kıdemli Backend Mühendisliğine terfi ettim."
     legs:

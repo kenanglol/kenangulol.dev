@@ -31,7 +31,7 @@ ports:
   - name: "DefineX"
     role: "Senior Backend Engineer"
     when: "Sep 2023 – Present"
-    where: "Remote, consultant at Garanti BBVA"
+    where: "Remote, consultant at Garanti Teknoloji"
     current: true
     text: "Promoted from Software Engineer to Senior Backend Engineer in 2025."
     legs:
