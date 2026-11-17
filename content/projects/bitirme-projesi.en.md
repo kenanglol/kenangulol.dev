@@ -6,7 +6,7 @@ status: "harbour"
 years: "2021"
 role: "B.Sc. thesis, Ege University"
 stack: ["Python", "ARIMA", "Neural network (MLP)", "scikit-learn"]
-weight: 3
+weight: 4
 ---
 
 My B.Sc. thesis in Computer Engineering at Ege University, completed in July 2021 under the supervision of Dr. Özgür Gümüş. The budget for data and computing tools came from TÜBİTAK's 2209-A research programme for undergraduate students.

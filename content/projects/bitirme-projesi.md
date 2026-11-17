@@ -5,7 +5,7 @@ status: "harbour"
 years: "2021"
 role: "Lisans tezi, Ege Üniversitesi"
 stack: ["Python", "ARIMA", "Yapay sinir ağı (MLP)", "scikit-learn"]
-weight: 3
+weight: 4
 ---
 
 Ege Üniversitesi Bilgisayar Mühendisliği'ndeki lisans tezim, Temmuz 2021'de Dr. Öğr. Üyesi Özgür Gümüş danışmanlığında tamamlandı. Verilerin ve hesaplama araçlarının bütçesi TÜBİTAK'ın 2209-A Üniversite Öğrencileri Araştırma Projeleri programından karşılandı.
