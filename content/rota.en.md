@@ -17,8 +17,8 @@ ports:
     text: "GPA 3.48 / 4.00. Graduation thesis: [a hybrid deep learning model](/en/projects/stock-forecasting/) for forecasting stock market indices and stock prices, funded by TÜBİTAK 2209-A."
   - name: "Yapı Kredi Teknoloji"
     role: "Software Engineer"
-    when: "Sep 2020 – Sep 2022"
-    where: "Remote, long-term intern until Jul 2021"
+    when: "Jul 2021 – Sep 2022"
+    where: "Remote"
     items:
       - "Designed and built, with my team, a Host Card Emulation (HCE) system that lets customers pay contactless with their phones, as with Apple Pay or Google Pay."
   - name: "n11.com"

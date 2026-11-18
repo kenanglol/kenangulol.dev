@@ -16,8 +16,8 @@ ports:
     text: "GNO 3,48 / 4,00. Bitirme tezi: borsa endeksi ve hisse fiyatı tahmini için [hibrit bir derin öğrenme modeli](/projeler/bitirme-projesi/), TÜBİTAK 2209-A desteğiyle."
   - name: "Yapı Kredi Teknoloji"
     role: "Software Engineer"
-    when: "Eyl 2020 – Eyl 2022"
-    where: "Uzaktan, Tem 2021'e kadar uzun dönem stajyer"
+    when: "Tem 2021 – Eyl 2022"
+    where: "Uzaktan"
     items:
       - "Ekibimle birlikte, müşterilerin telefonlarıyla temassız ödeme yapmasını sağlayan bir Host Card Emulation (HCE) sistemi tasarlayıp geliştirdim (Apple Pay ve Google Pay benzeri)."
   - name: "n11.com"
