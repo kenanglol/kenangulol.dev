@@ -18,7 +18,7 @@ ports:
   - name: "Yapı Kredi Teknoloji"
     role: "Software Engineer"
     when: "Sep 2020 – Sep 2022"
-    where: "Remote"
+    where: "Remote, long-term intern until Jul 2021"
     items:
       - "Designed and built, with my team, a Host Card Emulation (HCE) system that lets customers pay contactless with their phones, as with Apple Pay or Google Pay."
   - name: "n11.com"

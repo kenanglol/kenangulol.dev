@@ -17,7 +17,7 @@ ports:
   - name: "Yapı Kredi Teknoloji"
     role: "Software Engineer"
     when: "Eyl 2020 – Eyl 2022"
-    where: "Uzaktan"
+    where: "Uzaktan, Tem 2021'e kadar uzun dönem stajyer"
     items:
       - "Ekibimle birlikte, müşterilerin telefonlarıyla temassız ödeme yapmasını sağlayan bir Host Card Emulation (HCE) sistemi tasarlayıp geliştirdim (Apple Pay ve Google Pay benzeri)."
   - name: "n11.com"
