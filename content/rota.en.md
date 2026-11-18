@@ -4,8 +4,6 @@ slug: "route"
 layout: "rota"
 description: "Kenan Gülol's career and education: the ports of call from Ege University to DefineX."
 aliases: ["/cv/"]
-location: "Istanbul, Türkiye"
-pdf: "/files/kenan-gulol-cv-en.pdf"
 lead: >
   For over five years, I have built applications mostly in the banking sector,
   for both banks' internal operations and their customers. This page charts

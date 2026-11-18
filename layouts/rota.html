@@ -5,7 +5,7 @@
       {{ partial "vignette.html" "route" }}
       <h1>{{ .Title }}</h1>
       {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
-      <p class="contact-line">{{ with .Params.location }}<span>{{ . }}</span>{{ end }}{{ partial "social.html" . }}</p>
+      <p class="contact-line">{{ partial "social.html" . }}</p>
     </header>
 
     {{- /* Each port is a fix on the plotted course; newest first, the current one is lit */}}
@@ -35,12 +35,6 @@
       {{- end }}
     </div>
 
-    {{- /* The PDF button appears only once the file exists under static/ */}}
-    {{- with .Params.pdf }}
-      {{- if fileExists (printf "static%s" .) }}
-      <p class="no-print"><a class="button" href="{{ . | relURL }}" download>{{ i18n "downloadPdf" }}</a></p>
-      {{- end }}
-    {{- end }}
   </article>
 </div>
 {{ end }}

@@ -43,16 +43,9 @@ Bundan sonra `main` dalına yapılan her `git push` siteyi otomatik olarak yenid
 
 Bu iki değer boş kaldığı sürece yorum kutusu sayfaya hiç eklenmez, site yine çalışır.
 
-## 4. CV PDF'i
+## 4. Kişisel bilgiler
 
-Canva'dan iki CV'yi **PDF** olarak indir ve şu adlarla `static/files/` klasörüne koy:
-
-- `static/files/kenan-gulol-cv-tr.pdf`
-- `static/files/kenan-gulol-cv-en.pdf`
-
-Dosyalar eklenince Rota sayfasının sonunda **PDF olarak indir** düğmesi kendiliğinden görünür. Dosya yokken düğme gösterilmez.
-
-Not: Rota sayfasında telefon numarası bilerek yok. Herkese açık bir sayfada numara spam ve arama robotlarına açık olur.
+Sitede iletişim için yalnızca e-posta, LinkedIn ve GitHub var. Telefon numarası, adres ve yaşanan şehir bilerek yazılmıyor; CV de PDF olarak paylaşılmıyor. Herkese açık bir sayfada bu bilgiler spam ve arama robotlarına açık olur. CV'yi isteyen kişiye doğrudan gönder.
 
 ## 5. Yazı yazma
 

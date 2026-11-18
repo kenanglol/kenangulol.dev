@@ -3,8 +3,6 @@ title: "Rota"
 layout: "rota"
 description: "Kenan Gülol'un kariyeri ve eğitimi: Ege Üniversitesi'nden DefineX'e uğradığı limanlar."
 aliases: ["/cv/"]
-location: "İstanbul, Türkiye"
-pdf: "/files/kenan-gulol-cv-tr.pdf"
 lead: >
   Beş yılı aşkın süredir, çoğunlukla bankacılık sektöründe, bankaların iç
   süreçlerine ve müşterilerine yönelik uygulamalar geliştiriyorum. Bu sayfa
