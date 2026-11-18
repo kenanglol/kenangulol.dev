@@ -31,8 +31,8 @@ enableRobotsTXT = true
     [languages.tr.permalinks.section]
       projects = "/projeler/"
     [languages.tr.params]
-      description = "Kıdemli Backend Mühendisi. Java, Spring Boot, ödeme sistemleri ve yapay zeka üzerine yazılar."
-      role = "Kıdemli Backend Mühendisi"
+      description = "Senior Backend Engineer. Java, Spring Boot, ödeme sistemleri ve yapay zeka üzerine yazılar."
+      role = "Senior Backend Engineer"
     [[languages.tr.menus.main]]
       name = "Yazılar"
       pageRef = "/posts"
