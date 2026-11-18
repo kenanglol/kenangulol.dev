@@ -5,13 +5,19 @@ description: "GitHub Copilot ve Cursor ile çalışırken edindiğim izlenimler 
 tags: ["yapay-zeka", "araçlar"]
 ---
 
+{{< figure src="/images/posts/kodlama-asistani/cursor-copilot.webp" alt="Cursor ve GitHub Copilot logoları" >}}
+
 Yazılım mühendislerinden işlerini tek kelimeyle tanımlamalarını istesek çoğu insanın **kodlama** diyeceğini tahmin ediyorum. Yazılım geliştirmek özünde bir ya da birden çok probleme etkili çözümler üretmek olsa da kod yazmak ve sistemler kurmak, aktif çalışma saatlerimizin önemli bir kısmını kapsıyor. 2024 yılında bu sürecin geri dönülemez biçimde değiştiğini düşünüyorum. Bu değişimin en önemli parçası da hayatımıza giren kodlama asistanları.
 
 ChatGPT'nin tüm dünyaya ücretsiz olarak sunulması insanları oldukça etkiledi. Kullanıcıların bir kısmı onu bir eğlence aracı olarak gördü ve kısa süre sonra ilgisini kaybetti. Kimisi hayatına entegre etti ve ufak araştırmalar için Google'ın reklam çöplüğünden kurtulmayı amaçladı. Yazılım dünyasının aklındaki ilk soru ise bu aracı kod geliştirme süreçlerine nasıl entegre edeceğimiz oldu. Çünkü bizim elimizde, farklı mesleklerden insanların sahip olmadığı çok önemli bir avantaj var: internet üzerinde hayatını sürdüren, yıllara yayılmış muazzam bir topluluk ve bilgi bankası. Bunların çoğu da halka açık durumda. Stack Overflow, GitHub gibi birçok site bir yazılımcı için oldukça fazla bilgi barındırıyor. Bu verilerin işlenmesi ve uygun kullanım senaryolarıyla chatbot uygulamalarının eğitiminde kullanılması sonucunda kısa sürede ürünler görmeye başladık.
 
 ## GitHub Copilot ve Cursor
 
+{{< figure src="/images/posts/kodlama-asistani/copilot-nasil-calisir.webp" alt="GitHub Copilot'un OpenAI Codex modeli, GitHub servisi ve editör arasındaki çalışma şeması" caption="GitHub Copilot'un çalışma şeması" >}}
+
 Şüphesiz ki 2018 yılında GitHub'ın Microsoft tarafından satın alınması, yapay zeka uygulamaları çağına baktığımızda büyük anlam ifade ediyor. O zamanlar çoğu kullanıcı haklı olarak GitHub'ın bu satışının ürünü kötüye götüreceğini, kurumsallaşmayla budanacağını düşünüyordu. Ancak bugün geldiğimiz noktada GitHub aracılığıyla Microsoft kendisine yeni bir ürün katmayı başardı. GitHub Copilot'un kod asistanlarının ilk örneklerinden olmasının çeşitli avantajları var: pazarı erken domine etti ve bir kullanıcı kitlesi oluşturdu. Kendisine kullanıcı deneyimi açısından bir yol seçti, ve unutmamak lazım ki her seçim bir vazgeçiştir.
+
+{{< figure src="/images/posts/kodlama-asistani/cursor.webp" alt="Cursor logosu" >}}
 
 Cursor ise yola ufak çaplı bir startup olarak başladı ve kullanıcılara baştan itibaren alışık oldukları ve sevdikleri bir deneyim verebilmek için VS Code'un bir fork'u ile yoluna devam etti. Bunun üzerine kendi özelliklerini eklediler ve ortaya kullanıcı açısından özel bir deneyim çıktı.
 
@@ -23,11 +29,15 @@ Cursor'da daha kapsamlı değişiklikler yapmasını istememin sebebi, bence Cur
 
 ## Yazılımcılar tarihe mi karışıyor?
 
+{{< figure src="/images/posts/kodlama-asistani/kodlama-bitti-mi.webp" alt="Kodlamanın bittiğini iddia eden YouTube videolarının küçük resimleri" >}}
+
 Asistanların yeteneklerinin artmasıyla birçok kişi artık kodlamayı bilmeyenlerin de hayal ettikleri projeleri bu asistanlara yazdırabileceklerini düşündü. Sürekli sorun çıkaran, teslim tarihini kaçıran, isteklere olmaz diyebilen yazılımcılardan kurtulacağı için umutlanmış olmalılar. Üretilen içeriklerde büyük puntolarla "YAZILIMCILAR TARİHE KARIŞIYOR" gibi başlıklar atıldığını gördük. Ancak ben bunun henüz olmadığını düşünüyorum. Bana bu hissi veren de asistanlarla olan deneyimlerim.
 
 Bir geliştirme isteyene ve çalışan doğru cevabı alana kadar her şey çok güzel. Ancak asistanın size vermiş olduğu kodları uygulayıp çalıştırdığınızda hata aldığınız oldu mu? İşte o durumda kodlamayı bilmeyen biri, antik dilde tabletlere bakan turistler kadar çaresiz kalır. Çünkü bu asistanların sizin için kod yazıyor olması, her şeyi tamamen sizin istediğiniz gibi doğru ve eksiksiz yapacağı anlamına gelmez. Hatayla karşılaştığınızda, diyelim ki şanslısınız ve loglardan hatayı tespit ettiniz ve bu hatayı asistana söylediniz. İşte bu noktada hâlâ bir gelişim alanı olduğunu düşünüyorum. Asistanlar kod yazmak için tasarlanmış. Hataları anlamlandırmak ve yeni çözüm sunmak konusunda o kadar da başarılı olduklarını düşünmüyorum. Buradan sonra asistana bağlı kalmaya devam etmekte ısrar ederseniz ve şanslıysanız çalışan bir kod elde edersiniz. Yoksa muhtemelen arka arkaya alınan hatalardan sonra bir yerde saçma cevaplar verecek ya da aynı cevaplarda ısrarcı olacak.
 
 Hata sonrası başarılı bir çözüm önermesi de sorunları tam anlamıyla çözmüş olmuyor. Çünkü önceki hatalı çözümlerin uygulanmasından sonra ortaya çalışsa bile düzeni bozulmuş, hangi parçasının işe yaradığı belli olmayan bir kara kutu çıkmış oluyor. Bu da yazılan kodların kalitesini düşürüyor. Bu düşünce yalnızca benim değil, yapılan araştırmaların da sonucu. [Uplevel'ın yaptığı araştırmada](https://betanews.com/2024/09/17/genai-tools-dont-increase-coding-efficiency) Copilot'un kullanıcılar açısından verimlilikte hiçbir artış sağlamadığı, ancak hata oranını yüzde 41 artırdığı görülmüş.
+
+{{< figure src="/images/posts/kodlama-asistani/uplevel-arastirma.webp" alt="Uplevel araştırmasının özet grafiği: verimlilikte anlamlı değişim yok, hata oranında yüzde 41 artış, tükenmişlik riskinde etkisiz" caption="Kaynak: Uplevel, “Can GenAI Actually Improve Developer Productivity?”" >}}
 
 ## Yarış sürüyor
 
