@@ -5,7 +5,6 @@
       {{ partial "vignette.html" "route" }}
       <h1>{{ .Title }}</h1>
       {{- with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
-      <p class="contact-line">{{ partial "social.html" . }}</p>
     </header>
 
     {{- /* Each port is a fix on the plotted course; newest first, the current one is lit */}}
