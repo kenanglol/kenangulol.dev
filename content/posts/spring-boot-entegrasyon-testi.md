@@ -17,7 +17,6 @@ Bu yazıda veritabanına basit CRUD işlemleriyle veri kaydeden bir mikroservis 
 
 ```java
 @Service
-@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
