@@ -42,7 +42,7 @@ ports:
       - name: "Card authorization modernization"
         when: "May 2026 – Present"
         items:
-          - "Migrating the bank's debit card authorization from Mainframe to a new Java/Spring Boot architecture in a 6-person team."
+          - "Migrating the bank's debit card authorization from Mainframe to a new Java/Spring Boot architecture."
           - "Built e-commerce authorization end to end: card, transaction and account eligibility, security, fraud, and limit and cap checks."
           - "Delivered refund and reversal flows; ported 26 purchase and 8 refund checks from COBOL; proposed the adopted step-based flow design."
           - "Designed the project's first Camunda BPM flow, linking POS to credit and debit card authorization, and tested it end to end."

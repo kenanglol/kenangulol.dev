@@ -41,7 +41,7 @@ ports:
       - name: "Kart provizyon modernizasyonu"
         when: "May 2026 – Günümüz"
         items:
-          - "Banka kartı provizyon süreçlerini Mainframe'den yeni Java/Spring Boot mimarisine taşıyan 6 kişilik ekipte geliştiriciyim."
+          - "Banka kartı provizyon süreçlerini Mainframe'den yeni Java/Spring Boot mimarisine taşıyan ekipte geliştiriciyim."
           - "İnternet alışverişi provizyonunu uçtan uca kurduk: kart, işlem ve hesap uygunluğu, güvenlik, fraud, limit ve cap kontrolleri."
           - "İade ve iptal (reversal) akışlarını tamamladık; eski COBOL'daki 26 harcama ve 8 iade kontrolünü taşıdım, kodda benimsenen adım tabanlı akış tasarımını önerdim."
           - "Projede ilk kez kullanılan Camunda ile POS'u kredi ve banka kartı provizyonuna bağlayan BPM akışını tasarlayıp uçtan uca test ettik."
