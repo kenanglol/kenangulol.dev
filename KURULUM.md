@@ -68,7 +68,7 @@ Yazı burada başlar.
 - Bir yazıyı tek dilde yazmak sorun değil. Sadece o dilin listesinde görünür.
 - Yazmadan önce yerelde görmek için: `hugo server -D` ve tarayıcıda `http://localhost:1313`.
 
-`content/posts/ilk-kayit.md` ve `ilk-kayit.en.md` örnek yazılardır. İstediğin gibi düzenle ya da sil.
+Yeni bir yazı eklemek için `content/posts/` altına bir Markdown dosyası aç; mevcut yazıları örnek olarak kullanabilirsin.
 
 ## 6. Projeler ve rota
 
